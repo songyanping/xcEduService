@@ -1,0 +1,28 @@
+server:
+  port: 31001
+spring:
+  application:
+    name: xc-service-manage-cms
+  data:
+    mongodb:
+      uri: mongodb://root:123456@10.20.0.204:27017
+      database: xc_cms
+  rabbitmq:
+    host: 10.20.0.204
+    port: 5672
+    username: admin
+    password: admin
+    virtualHost: /
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.20.0.204:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${server.port}  #示例名称
+    prefer-ip-address: true     #访问路径可以显示IP地址
+
