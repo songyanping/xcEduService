@@ -28,7 +28,6 @@ public class TaskService {
     @Autowired
     XcTaskHisRepository xcTaskHisRepository;
 
-
     //取出前n条任务，取出指定时间之前处理得任务
     public List<XcTask> findTaskList(Date updateTime){
         //设置分页参数/取出前n条记录
