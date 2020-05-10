@@ -101,4 +101,13 @@ public class CourseController extends BaseController implements CourseController
         return courseService.publish(courseId);
     }
 
+    //接口demo
+    @PostMapping("/demo")
+    public CoursePublishResult demo(@RequestBody  Teachplan teachplan) {
+       CoursePublishResult coursePublishResult= new CoursePublishResult();
+       return coursePublishResult;
+    }
+
+
+
 }
