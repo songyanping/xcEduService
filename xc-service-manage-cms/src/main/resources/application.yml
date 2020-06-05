@@ -5,10 +5,10 @@ spring:
     name: xc-service-manage-cms
   data:
     mongodb:
-      uri: mongodb://root:123456@10.20.0.204:27017
+      uri: mongodb://root:123456@172.16.101.170:27017
       database: xc_cms
   rabbitmq:
-    host: 10.20.0.204
+    host: 172.16.101.170
     port: 5672
     username: admin
     password: admin
@@ -21,7 +21,7 @@ mybatis:
 eureka:
   client:
     service-url:
-      defaultZone: http://10.20.0.204:8761/eureka
+      defaultZone: http://localhost:8761/eureka
   instance:
     instance-id: ${spring.application.name}:${server.port}  #示例名称
     prefer-ip-address: true     #访问路径可以显示IP地址

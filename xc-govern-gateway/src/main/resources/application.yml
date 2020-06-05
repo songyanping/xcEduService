@@ -6,7 +6,7 @@ spring:
   application:
     name: xc-govern-gateway
   redis:
-    host: ${REDIS_HOST:10.20.0.204}
+    host: ${REDIS_HOST:172.16.101.170}
     port: ${REDIS_PORT:6379}
     timeout: 5000 #连接超时 毫秒
     database: 0
@@ -22,7 +22,7 @@ eureka:
     registerWithEureka: true #服务注册开关
     fetchRegistry: true #服务发现开关
     serviceUrl: #Eureka客户端与Eureka服务端进行交互的地址，多个中间用逗号分隔
-      defaultZone: ${EUREKA_SERVER:http://10.20.0.204:8761/eureka/}
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka/}
   instance:
     prefer-ip-address:  true  #将自己的ip地址注册到Eureka服务中
     ip-address: 127.0.0.1
